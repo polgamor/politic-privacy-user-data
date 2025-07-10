@@ -31,7 +31,6 @@
 
         .container {
             background-color: white;
-            padding: 2rem 3rem;
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -39,6 +38,18 @@
             width: 90%;
             transform: scale(0.95);
             animation: fadeInScale 0.5s ease-out forwards;
+            padding: 0; 
+            overflow: hidden; 
+        }
+
+        .verification-section {
+            padding: 2.5rem 3rem 2rem; /* Espaciado interno para la sección de arriba */
+        }
+
+        .logo-section {
+            padding: 2rem 3rem 2.5rem; 
+            border-top: 1px solid #f0f0f0; 
+            background-color: #fcfcfc;
         }
 
         @keyframes fadeInScale {
@@ -49,40 +60,23 @@
         }
 
         .logo {
-            max-width: 120px; /* Ajusta el tamaño de tu logo */
-            margin-bottom: 1.5rem;
+            max-width: 120px;
+            margin: 0;
+            vertical-align: middle; 
         }
 
         h1 {
             color: var(--primary-text-color);
             font-size: 2em;
-            margin: 1rem 0 0.5rem;
+            margin: 1rem 0 0.5rem; 
         }
 
         p {
             color: var(--secondary-text-color);
             font-size: 1.1em;
-            margin-bottom: 2rem;
+            margin-bottom: 0; 
         }
 
-        .button {
-            display: inline-block;
-            background-color: var(--button-bg-color);
-            color: var(--button-text-color);
-            padding: 12px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .button:hover {
-            background-color: #2980b9; /* Un tono más oscuro del color del botón */
-            transform: translateY(-2px);
-        }
-
-        /* --- ANIMACIÓN DEL CHECK --- */
         .checkmark-wrapper {
             width: 100px;
             height: 100px;
@@ -140,21 +134,22 @@
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        
-        <div class="checkmark-wrapper">
-            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
-                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-            </svg>
+    <body>
+        <div class="container">
+            <div class="verification-section">
+                <div class="checkmark-wrapper">
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                </div>
+                <h1>Verified!</h1>
+                <p>Your email address has been successfully verified. Welcome aboard!</p>
+            </div>
+    
+            <div class="logo-section">
+                 <img src="MaltaGO_icon.png" alt="Geosys" class="logo">
+            </div>
         </div>
-
-        <h1>Verified!</h1>
-        <p>Your email address has been successfully verified. Welcome aboard!</p>
-
-        <img src="MaltaGO_icon.png" alt="Geosys" class="logo">
-        
-    </div>
-</body>
+    </body>
 </html>
