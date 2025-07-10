@@ -1,37 +1,175 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad</title>
+    <title>Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
+        /* * INSTRUCCIONES DE LA PALETA DE COLORES:
+         * Reemplaza los códigos hexadecimales de abajo con los colores de tu paleta.
+         * He usado valores de ejemplo para que puedas ver dónde va cada color.
+         */
+        :root {
+            --primary-color: #2c3e50;    /* Color para títulos y elementos principales (ej. azul oscuro) */
+            --text-color: #34495e;       /* Color para el texto principal (ej. gris oscuro) */
+            --background-color: #f8f9fa; /* Color de fondo de la página (ej. gris muy claro) */
+            --footer-bg-color: #2c3e50;  /* Color de fondo del pie de página */
+            --footer-text-color: #ffffff;/* Color del texto del pie de página */
+            --link-color: #3498db;       /* Color para los enlaces */
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            font-size: 1.4em;
+            margin-top: 30px;
+            border-bottom: none;
+        }
+
+        p, ul {
+            font-size: 1.1em;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        strong {
+            color: var(--primary-color);
+        }
+        
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: var(--footer-bg-color);
+            color: var(--footer-text-color);
+        }
     </style>
 </head>
 <body>
-    <h1>Política de Privacidad</h1>
-    <p><strong>Fecha de última actualización:</strong> 4 de julio de 2025</p>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated"><strong>Last Updated:</strong> July 4, 2025</p>
 
-    <h2>1. Información que recopilamos</h2>
-    <p>
-        Nuestra aplicación utiliza el inicio de sesión de Facebook para autenticar a los usuarios.
-        Recopilamos la siguiente información proporcionada por Facebook:
-    </p>
-    <ul>
-        <li>Nombre público</li>
-        <li>Dirección de correo electrónico</li>
-        <li>Foto de perfil</li>
-    </ul>
-    <p>No recopilamos ninguna otra información personal sin su consentimiento explícito.</p>
+        <h2>1. Introduction</h2>
+        <p>
+            Welcome to our application. Your privacy is critically important to us. This Privacy Policy outlines the types of personal information we collect and receive, how we use it, and the steps we take to safeguard your information when you use our services.
+        </p>
 
-    <h2>2. Uso de la información</h2>
-    <p>
-        Utilizamos la información recopilada exclusivamente para crear y gestionar su cuenta de usuario dentro de nuestra aplicación y personalizar su experiencia.
-    </p>
+        <h2>2. Information We Collect</h2>
+        <p>We collect information to provide better services to all our users. The information we collect is divided into two categories:</p>
 
-    <h2>3. Contacto</h2>
-    <p>
-        Si tiene alguna pregunta sobre esta política de privacidad, puede contactarnos en: <strong>tu-email-de-soporte@ejemplo.com</strong>
-    </p>
+        <h3>2.1. Information You Provide to Us</h3>
+        <p>
+            Our application uses <strong>Facebook Login</strong> to authenticate users. By using Facebook Login, you grant us permission to collect the following information from your Facebook profile:
+        </p>
+        <ul>
+            <li><strong>Public Name:</strong> Your publicly available name on Facebook.</li>
+            <li><strong>Email Address:</strong> The primary email address associated with your Facebook account.</li>
+            <li><strong>Profile Picture:</strong> Your public profile picture.</li>
+        </ul>
+        <p>We do not collect any other personal information without your explicit consent.</p>
+        
+        <h3>2.2. Information We Collect Automatically</h3>
+        <p>
+            When you use our services, we may automatically collect certain information about your device and usage, such as your IP address, operating system, browser type, and interactions with our application. This data is used for analytical purposes to improve our service.
+        </p>
+
+        <h2>3. How We Use Your Information</h2>
+        <p>
+            We use the information we collect for the following purposes:
+        </p>
+        <ul>
+            <li><strong>To Create and Manage Your Account:</strong> To set up your user account, provide you with our services, and communicate with you.</li>
+            <li><strong>To Personalize Your Experience:</strong> To customize the content and experience you see within our application.</li>
+            <li><strong>To Improve Our Services:</strong> To understand how users interact with our application and to make improvements for future versions.</li>
+            <li><strong>To Communicate with You:</strong> To send you service-related notifications, updates, and promotional messages, which you can opt-out of at any time.</li>
+        </ul>
+
+        <h2>4. Sharing and Disclosure of Information</h2>
+        <p>
+            We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties. This does not include trusted third parties who assist us in operating our application, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety.
+        </p>
+        
+        <h2>5. Data Retention</h2>
+        <p>
+            We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.
+        </p>
+
+        <h2>6. Security of Your Information</h2>
+        <p>
+            The security of your data is important to us. We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access it. However, remember that no method of transmission over the Internet or method of electronic storage is 100% secure.
+        </p>
+        
+        <h2>7. Your Rights and Choices</h2>
+        <p>
+            You have certain rights regarding the personal information we hold about you. You can access or delete your account information at any time through the application's settings. If you need further assistance, you can contact us using the details below.
+        </p>
+
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>
+            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
+        </p>
+
+        <h2>9. Contact Us</h2>
+        <p>
+            If you have any questions about this Privacy Policy, please contact us at:
+            <strong><a href="mailto:your-support-email@example.com">your-support-email@example.com</a></strong>
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 [Your Company Name]. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
