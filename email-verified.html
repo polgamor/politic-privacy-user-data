@@ -1,39 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Email Verified</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      background-color: white;
-      padding: 2rem 3rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-    h1 {
-      color: #28a745;
-      margin-bottom: 1rem;
-    }
-    p {
-      color: #555;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verified Successfully</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* * INSTRUCCIONES DE LA PALETA DE COLORES:
+         * Reemplaza los códigos hexadecimales de abajo con los colores de tu paleta.
+         * He usado valores de ejemplo profesionales que funcionan bien para una página de éxito.
+         */
+        :root {
+            --success-color: #28a745;     /* Color para el check y elementos de éxito (ej. verde) */
+            --primary-text-color: #2c3e50; /* Color para títulos y texto principal (ej. azul oscuro) */
+            --secondary-text-color: #555;  /* Color para párrafos (ej. gris oscuro) */
+            --background-color: #f4f6f8;   /* Color de fondo de la página (ej. gris claro) */
+            --button-bg-color: #3498db;    /* Color de fondo del botón (ej. azul) */
+            --button-text-color: #ffffff;  /* Color del texto del botón */
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--background-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            transform: scale(0.95);
+            animation: fadeInScale 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .logo {
+            max-width: 120px; /* Ajusta el tamaño de tu logo */
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            color: var(--primary-text-color);
+            font-size: 2em;
+            margin: 1rem 0 0.5rem;
+        }
+
+        p {
+            color: var(--secondary-text-color);
+            font-size: 1.1em;
+            margin-bottom: 2rem;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9; /* Un tono más oscuro del color del botón */
+            transform: translateY(-2px);
+        }
+
+        /* --- ANIMACIÓN DEL CHECK --- */
+        .checkmark-wrapper {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1rem;
+        }
+
+        .checkmark-circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 3;
+            stroke-miterlimit: 10;
+            stroke: var(--success-color);
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 3;
+            stroke: #fff;
+            stroke-miterlimit: 10;
+            box-shadow: inset 0px 0px 0px var(--success-color);
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+
+        .checkmark-check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes scale {
+            0%, 100% {
+                transform: none;
+            }
+            50% {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 50px var(--success-color);
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Email Verified</h1>
-    <p>Your email address has been successfully verified.</p>
-  </div>
+    <div class="container">
+        <img src="logo.png" alt="Your Company Logo" class="logo">
+        
+        <div class="checkmark-wrapper">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+
+        <h1>Verified!</h1>
+        <p>Your email address has been successfully verified. Welcome aboard!</p>
+        
+        <a href="#" class="button">Continue to Your Account</a>
+    </div>
 </body>
 </html>
